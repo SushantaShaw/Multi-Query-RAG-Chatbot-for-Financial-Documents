@@ -1,0 +1,5 @@
+git_ssh
+git_ssh.pub
+*.ipynb
+env
+.vscode/

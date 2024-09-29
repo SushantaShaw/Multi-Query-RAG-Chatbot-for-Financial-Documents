@@ -1,0 +1,5 @@
+ input_files_path : '.\code\icici_credit_cards\'
+ db_collection_name : "credit-card-minilm"
+ db_directory : '.\code\icici_credit_card_chromadb\'
+ langsmith_project : "rag-bits-project"
+ hallucination_model : 'vectara/hallucination_evaluation_model'

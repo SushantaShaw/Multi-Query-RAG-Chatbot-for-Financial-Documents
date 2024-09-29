@@ -1,0 +1,116 @@
+2024-09-01 22:55:57,098 - rag-logger - INFO - User input:Hi
+2024-09-01 22:55:57,098 - rag-logger - INFO - context:first=ChatPromptTemplate(input_variables=['question'], messages=[HumanMessagePromptTemplate(prompt=PromptTemplate(input_variables=['question'], template='You are an AI language model assistant. Your task is to generate 4 \n        different versions of the given user question to retrieve relevant documents from a vector \n        database. By generating multiple perspectives on the user question, your goal is to help\n        the user overcome some of the limitations of the distance-based similarity search. \n        Provide these alternative questions separated by newlines and each new quetion should start with numerical order. Original question: {question}'))]) middle=[ChatCohere(client=<cohere.client.Client object at 0x00000187EEDD3A00>, async_client=<cohere.client.AsyncClient object at 0x00000187EEDD39A0>, model='command-r', cohere_api_key=SecretStr('**********')), StrOutputParser(), RunnableLambda(...), RunnableLambda(get_cleaned_output), RunnableEach(bound=VectorStoreRetriever(tags=['Chroma', 'HuggingFaceEmbeddings'], vectorstore=<langchain_community.vectorstores.chroma.Chroma object at 0x00000187D3DE9270>))] last=RunnableLambda(get_unique_union)
+2024-09-01 22:55:57,098 - rag-logger - INFO - model output:Hello! How can I help you today?
+2024-09-01 22:55:58,545 - rag-logger - INFO - Hallucination score:tensor([0.0491])
+2024-09-01 22:56:48,584 - rag-logger - INFO - User input:tell me credit cards which are good for students
+2024-09-01 22:56:48,594 - rag-logger - INFO - context:first=ChatPromptTemplate(input_variables=['question'], messages=[HumanMessagePromptTemplate(prompt=PromptTemplate(input_variables=['question'], template='You are an AI language model assistant. Your task is to generate 4 \n        different versions of the given user question to retrieve relevant documents from a vector \n        database. By generating multiple perspectives on the user question, your goal is to help\n        the user overcome some of the limitations of the distance-based similarity search. \n        Provide these alternative questions separated by newlines and each new quetion should start with numerical order. Original question: {question}'))]) middle=[ChatCohere(client=<cohere.client.Client object at 0x00000187EEDD3A00>, async_client=<cohere.client.AsyncClient object at 0x00000187EEDD39A0>, model='command-r', cohere_api_key=SecretStr('**********')), StrOutputParser(), RunnableLambda(...), RunnableLambda(get_cleaned_output), RunnableEach(bound=VectorStoreRetriever(tags=['Chroma', 'HuggingFaceEmbeddings'], vectorstore=<langchain_community.vectorstores.chroma.Chroma object at 0x00000187D3DE9270>))] last=RunnableLambda(get_unique_union)
+2024-09-01 22:56:48,598 - rag-logger - INFO - model output:This is not in my context. I have knowledge of ICICI credit cards only. 
+
+Some good options from ICICI are:
+- ICICI Bank Accelero Credit Card
+- ICICI Bank Expressions Credit Card
+- ICICI Bank Mine Credit Card
+2024-09-01 22:56:49,513 - rag-logger - INFO - Hallucination score:tensor([0.0032])
+2024-09-01 23:02:12,698 - rag-logger - INFO - User input:tell me credit cards which are good for students
+2024-09-01 23:03:42,107 - rag-logger - INFO - User input:context = retrieval_chain.invoke({"question":question})
+2024-09-01 23:03:42,133 - rag-logger - INFO - model output:Sure ! I have accessed the information in the given context.
+2024-09-01 23:04:15,236 - rag-logger - INFO - Hallucination score:tensor([0.3760])
+2024-09-01 23:04:41,743 - rag-logger - INFO - User input:tell me credit cards which are good for students
+2024-09-01 23:04:41,758 - rag-logger - INFO - model output:This is not in my context. I have knowledge of various ICICI credit cards only. 
+
+Some of the cards with zero joining and annual fees are:
+- ICICI Bank Mine Credit Card
+- ICICI Bank Parakram Select Credit Card
+- ICICI Bank Accelero Credit Card
+
+The ICICI Bank Mine Credit Card offers 5% cashback on Key Brands and 1% cashback on all retail spends. While the Parakram Select Credit Card provides complimentary access to domestic airport lounges and railway lounges, the Accelero Credit Card grants the cardholder an annual gift of 1500 ICICI Bank Reward Points and complimentary access to domestic airport lounges.
+2024-09-01 23:05:00,303 - rag-logger - INFO - Hallucination score:tensor([0.6759])
+2024-09-01 23:06:04,714 - rag-logger - INFO - User input:which icici credit cards are good for salaried employee?
+2024-09-01 23:06:04,730 - rag-logger - INFO - model output:The following ICICI credit cards are good options for salaried employees:
+
+- ICICI Bank Rubyx Credit Card: It offers a welcome voucher worth INR 5000+ and air accident insurance cover of up to INR 1 crore.
+
+- ICICI Bank Emeralde Credit Card: This card provides unlimited international and domestic lounge access and complimentary golf rounds every month.
+
+- ICICI Bank Sapphiro Credit Card: The card offers welcome vouchers worth INR 9000+ and 4 complimentary access to International Airport lounges per calendar year.
+
+- ICICI Bank Coral Credit Card: It gives 2 reward points per INR 100 spent on domestic spends and 1 reward point per INR 100 on utility and insurance. Cardholders also get 1 complimentary domestic access per quarter to select airport lounges.
+
+- ICICI Bank Expressions Credit Card: This card offers 3 ICICI Bank Reward Points per INR 100 spent on all spends except fuel and 1 complimentary domestic access per quarter to select airport lounges.
+
+These cards offer a variety of benefits to salaried employees, from airport lounge access to reward points on spends.
+2024-09-01 23:06:15,028 - rag-logger - INFO - Hallucination score:tensor([0.1907])
+2024-09-07 18:50:45,755 - rag-logger - INFO - input:<built-in function input>
+2024-09-07 18:51:27,201 - rag-logger - INFO - input:<built-in function input>
+2024-09-07 18:51:27,204 - rag-logger - INFO - output:Hello! How can I assist you today? If you have any questions related to the ICICI credit cards, please let me know and I'll do my best to provide an answer based on the provided context.
+2024-09-07 18:52:16,126 - rag-logger - INFO - input:<built-in function input>
+2024-09-07 18:52:16,126 - rag-logger - INFO - output:Hello Sushanta, it's nice to meet you! How can I help you today? If you have any questions related to ICICI credit cards, please let me know and I'll do my best to provide an answer based on the provided context.
+2024-09-07 18:53:15,165 - rag-logger - INFO - input:<built-in function input>
+2024-09-07 18:53:15,165 - rag-logger - INFO - output:Based on the provided context, there is no specific mention of a credit card that would be best for students. The context mainly covers the features and benefits of various ICICI credit cards, but it does not provide a comparison between them for different categories of users, such as students.
+
+In general, a credit card for students should have low fees, a reasonable credit limit, and rewards or cashback programs that cater to students' needs. Some banks offer student credit cards with features such as lower interest rates, no annual fees, and rewards for good grades.
+
+So, I would recommend checking with ICICI bank directly or visiting their website to see if they have any credit cards specifically designed for students.
+2024-09-07 18:54:02,061 - rag-logger - INFO - input:<built-in function input>
+2024-09-07 18:54:02,061 - rag-logger - INFO - output:Based on the provided context, the ICICI Bank Rubyx Credit Card could be a good option for someone who shops regularly. This card offers 2 reward points per INR 100 spent on domestic spends, 4 reward points per INR 100 spent on international spends, and 1 reward point per INR 100 spent on utility & insurance. Additionally, under the new ICICI Bank Milestone Rewards program, you can earn 3000 Reward Points on spending INR 3,00,000 on your card and 1500 Reward Points each time you cross INR 1,00,000 spend thereafter in an anniversary year, with a maximum of 15,000 Reward Points per year.
+
+The ICICI Bank Emeralde Credit Card could also be a good option for regular shoppers, as it offers unlimited international and domestic lounge access, nominal mark up of 1.5% for international transactions, complimentary golf rounds every month, and exclusive offers on BookMyShow and ICICI Culinary Treats Program.
+
+The ICICI Bank Sapphiro Credit Card is another option that offers 2 reward points per INR 100 spent on domestic spends, 4 reward points per INR 100 spent on international spends, and 1 reward point per INR 100 spent on utility & insurance. Additionally, under the new ICICI Bank Milestone Rewards program, you can earn 4000 Reward Points on spending INR 4,00,000 on your card and 2000 ICICI Reward Points each time you cross INR 1,00,000 spend thereafter in an anniversary year, with a maximum of 20,000 Reward Points per year.
+
+All of these cards come with annual fees and joining fees, so it's important to consider your budget and spending habits before choosing a credit card.
+2024-09-07 19:02:57,553 - rag-logger - INFO - input:<built-in function input>
+2024-09-07 19:02:57,553 - rag-logger - INFO - output:Hi, Hello! How can I help you today?
+2024-09-07 19:03:11,952 - rag-logger - INFO - input:<built-in function input>
+2024-09-07 19:03:11,952 - rag-logger - INFO - output:Welcome Aboard Sushanta! Hope you are doing well.
+2024-09-07 19:03:34,092 - rag-logger - INFO - input:<built-in function input>
+2024-09-07 19:37:34,229 - rag-logger - INFO - input:<built-in function input>
+2024-09-07 19:38:32,066 - rag-logger - INFO - input:<built-in function input>
+2024-09-07 19:38:32,066 - rag-logger - INFO - output:Here is a list of credit cards that can benefit businessmen:
+
+1. ICICI Bank Emeralde Credit Card
+2. ICICI Bank Sapphiro Credit Card
+3. ICICI Bank Signature Credit Card
+4. Amazon Pay ICICI Credit Card
+5. Intermiles Sapphiro ICICI Bank Credit Card
+
+These cards offer a variety of benefits such as lounge access, rewards points, and fuel surcharges waiver, which could be advantageous for businessmen and women.
+2024-09-07 19:38:54,458 - rag-logger - INFO - input:<built-in function input>
+2024-09-20 17:48:34,402 - rag-logger - INFO - input:<built-in function input>
+2024-09-20 17:48:34,403 - rag-logger - INFO - output:Hello Sushanta! I hope you are doing well.
+2024-09-20 17:49:11,871 - rag-logger - INFO - input:<built-in function input>
+2024-09-20 17:49:11,871 - rag-logger - INFO - output:Here are some credit cards that you might find beneficial as an IT professional: 
+
+1. ICICI Bank Emeralde Credit Card
+2. ICICI Bank Sapphiro Credit Card
+3. Emirates Skywards ICICI Bank Sapphiro Credit Card
+4. ICICI Amazon Pay Credit Card
+5. ICICI Bank Signature Credit Card
+6. ICICI Bank Platinum Credit Card
+
+Also, there are some credit cards with no annual fees like:
+
+1. Amazon Pay ICICI Credit Card
+2. ICICI Bank Platinum Credit Card
+
+You can choose any of these cards based on your requirements.
+2024-09-20 17:49:56,906 - rag-logger - INFO - input:<built-in function input>
+2024-09-20 17:49:56,907 - rag-logger - INFO - output:The best credit card among the options mentioned for an IT professional would be the Emirates Skywards ICICI Bank Sapphiro Credit Card. Here's why:
+
+1. It offers a high reward rate with bonus InterMiles. You can earn up to 2.5 Skywards Miles per Rs. 100 spent and get a milestone benefit of upgrading to a Gold Tier Membership. 
+
+2. It provides unlimited international and domestic airport lounge access, which can be beneficial for frequent travellers. 
+
+3. The card has a decent joining and renewal benefit. Upon joining, you can receive benefits worth 10,000 miles, including flight and hotel vouchers. 
+
+4. You can get a 1% fuel surcharge waiver at HPCL petrol pumps which is a useful feature for everyone, including IT professionals who are likely to have a busy schedule and may require fuel purchases frequently. 
+
+5. It offers exclusive dining offers through the Culinary Treats Programme.
+
+Therefore, the Emirates Skywards ICICI Bank Sapphiro Credit Card provides a good combination of rewards, lounge access, and fuel benefits, making it a good choice for IT professionals.
+2024-09-20 17:50:24,529 - rag-logger - INFO - input:<built-in function input>
+2024-09-20 17:50:24,530 - rag-logger - INFO - output:The annual fee for the Emirates Skywards ICICI Bank Sapphiro Credit Card is Rs. 5,000, plus Goods and Services Tax (GST) of 18%, totaling around Rs. 5,900 approximately. 
+
+However, there is a waiver on the annual fee. If you spend more than Rs. 5 lakh in a year on your card, you can get the annual fee waived off for the next year. So, IT professionals who have high annual spends can benefit from this card's annual fee waiver and its various features.
+2024-09-20 17:53:22,436 - rag-logger - INFO - input:<built-in function input>
+2024-09-20 17:53:22,437 - rag-logger - INFO - output:Your name is Sushanta.
